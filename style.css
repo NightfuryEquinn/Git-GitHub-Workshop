@@ -2,14 +2,74 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html {
   font-family: 'Montserrat', sans-serif;
 }
 
 body {
-  color: #000000;
-  background-color: #d9d9d9;
-  border: 2px solid #EF5033;
+  background: linear-gradient(-135deg, #030404, #060809, #090c0d, #0c1012, #0f1416);
+  background-size: 500% 500%;
+  animation: gradient 5s ease infinite;
 }
+
+.main-container {
+  height: 100vh;
+  width: auto;
+  padding: 1rem;
+  color: #d9d9d9;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  align-items: center;
+}
+
+img {
+  height: 30vh;
+  width: auto;
+  object-fit: cover;
+  border-radius: 0.75rem;
+}
+
+h1 {
+  letter-spacing: 0.25rem;
+  text-align: center;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.accordian {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  list-style-type: none;
+}
+
+.accordian-control {
+  padding: 0.75rem;
+  color: #d9d9d9;
+  background-color: #EF5033;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.75rem;
+  transition: 0.25s ease-in;
+}
+
+.accordian-control:hover {
+  color: #EF5033;
+  background-color: #d9d9d9;
+}
+
+.accordian-content {
+  display: none;
+}
+
