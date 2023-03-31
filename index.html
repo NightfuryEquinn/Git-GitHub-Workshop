@@ -39,8 +39,153 @@
       <div class="content-container">
         <div class="content">
           <h3>Cloning repository</h3>
-          <h5>Description</h5>
-          <p>Clone</p>
+
+          <h5>The easiest one. Nothing can go wrong with this.</h5>
+          <br/>
+
+          <h5>1. Go to any repository, press the "Code" (The blue button).</h5>
+          <br/>
+
+          <h5>2. Select either HTTPS or SSH.</h5>
+
+          <sup>NOTE: Make sure you have configured your SSH key before cloning it via SSH.</sup>
+          <br/>
+
+          <h5>3. Go to any folder directory you wish using Command Prompt or Powershell or Git Bash.</h5>
+          <p>cd "your folder"</p>
+
+          <p>git clone "copied link / copied ssh"</p>
+          <sup>NOTE: It will automatically create a folder for you.</sup>
+
+          <p>git clone "copied link / copied ssh" .</p>
+          <sup>NOTE: If you created a folder for the repository, add a dot behind.</sup>
+        </div>
+
+        <div class="content">
+          <h3>Forking repository</h3>
+
+          <h5>Basically duplicating a repository from others.</h5>
+          <br/>
+
+          <h5>1. Go to any repository, press the "Fork" (Top right corner).</h5>
+          <br/>
+
+          <h5>2. Leave everything as default. You may change the repository name as the forked repository will be at your disposal.</h5>
+        
+          <sup>NOTE: You can't fork your own repository in the same account.</sup>
+        </div>
+
+        <div class="content">
+          <h3>Creating repository</h3>
+
+          <h5>New project in the house.</h5>
+          <br/>
+
+          <h5>1. Go to your repository tab, press the "New" (Yes, the blue button).</h5>
+          <br/>
+
+          <h5>2. Name your repository and provide a description for it.</h5>
+          <br/>
+
+          <h5>3. Choose the repository visibility: Public OR Private.</h5>
+          <br/>
+
+          <h5>4. Choose MIT License as default if you want your repository as open-sourced.</h5>
+
+          <sup>NOTE: License is like a copyright to your code.</sup>
+          <br/>
+
+          <h5>5. Press the "Create repository" (Yes, blue button again) and your repository is created.</h5>
+        </div>
+
+        <div class="content">
+          <h3>Uploading changes</h3>
+
+          <h5>Saving your edited codes to GitHub, cloud storage but cooler.</h5>
+          <br/>
+
+          <h5>1. Open Command Prompt or Powershell or Git Bash and go to your repository folder path.</h5>
+          <p>cd "your folder"</p>
+          <br/>
+
+          <h5>2. Include all files changed.</h5>
+          <p>git add --all</p>
+          <br/>
+
+          <h5>3. Write a commit message as a backlog.</h5>
+          <p>git commit -m "your message"</p>
+          <br/>
+
+          <h5>4. Upload all files to GitHub.</h5>
+          <p>git push origin "your branch name"</p>
+        </div>
+
+        <div class="content">
+          <h3>Downloading changes</h3>
+
+          <h5>Make your repository up-to-date to the latest version.</h5>
+          <br/>
+
+          <h5>1. Open Command Prompt or Powershell or Git Bash and go to your repository folder path.</h5>
+          <p>cd "your folder"</p>
+          <br/>
+
+          <h5>2. Update your local file directory.</h5>
+          <p>git pull origin main</p>
+          <sup>NOTE: Always download from the main/master branch.</sup>
+        </div>
+
+        <div class="content">
+          <h3>Fetching branches</h3>
+
+          <h5>Similar to Pull, but it won't make changes to your local files. Recommended for developers to review other developers code before merging.</h5>
+          <br/>
+
+          <h5>1. Open Command Prompt or Powershell or Git Bash and go to your repository folder path.</h5>
+          <p>cd "your folder"</p>
+          <br/>
+
+          <h5>2. Fetch new branches.</h5>
+          <p>git fetch</p>
+          <br/>
+
+          <h5>3. Change to the newly fetch branches for code review remotely.</h5>
+          <p>git branch</p>
+          <sup>NOTE: This is to check the branches fetched and its name.</sup>
+          <p>git checkout "the branch"</p>
+          <br/>
+
+          <h5>(Optional) 4. If any changes are made in the fetched branch, update the changes back to the branch in GitHub.</h5>
+          <p>git add --all</p>
+          <p>git commit -m "your message"</p>
+          <p>git push origin "the branch"</p>
+          <sup>NOTE: This will update the branch for merging to the main/master branch later.</sup>
+        </div>
+
+        <div class="content">
+          <h3>Create a new branch</h3>
+        </div>
+
+        <div class="content">
+          <h3>Changing to another branch</h3>
+        </div>
+
+        <div class="content">
+          <h3>Checking branches</h3>
+        </div>
+
+        <div class="content">
+          <h3>Deleting branches</h3>
+        </div>
+
+        <div class="content">
+          <h3>Merging branches to main branch</h3>
+        </div>
+
+        <hr class="hr-text" data-content="Optional Section"/>
+
+        <div class="content">
+          <h3>Creating SSH key</h3>
         </div>
       </div>
     </div>
