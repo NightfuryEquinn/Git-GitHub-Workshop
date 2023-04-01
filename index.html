@@ -99,6 +99,35 @@
         </div>
 
         <div class="content">
+          <h3>Checking status</h3>
+
+          <h5>Have a sense of security, ehe.</h5>
+          <br/>
+
+          <h5>1. Open Command Prompt or Powershell or Git Bash and go to your repository folder path.</h5>
+          <p>cd "your folder"</p>
+          <br/>
+
+          <h5>2. To know what file created, added, modified, deleted, and which branches you are currently in.</h5>
+          <p>git status</p>
+        </div>
+
+        <div class="content">
+          <h3>Reverting changes</h3>
+
+          <h5>Thinking of undoing everything, just snap your fingers. I mean stash your repository.</h5>
+          <br/>
+
+          <h5>1. Open Command Prompt or Powershell or Git Bash and go to your repository folder path.</h5>
+          <p>cd "your folder"</p>
+          <br/>
+
+          <h5>2. Clearing any created, added, modified, deleted files you made.</h5>
+          <p>git stash</p>
+          <sup>NOTE: It will revert back to the latest pull from main branch you have previously made.</sup>
+        </div>
+
+        <div class="content">
           <h3>Uploading changes</h3>
 
           <h5>Saving your edited codes to GitHub, cloud storage but cooler.</h5>
@@ -117,7 +146,11 @@
           <br/>
 
           <h5>4. Upload all files to GitHub.</h5>
-          <p>git push origin "your branch name"</p>
+          <p>git push origin main/master/"your branch name"</p>
+          <br/>
+
+          <h5>(Optional) 5. If you push from a branch, create a merge request so whoever in charge can have a code review before merging it to the main branch. There will be a link available in your terminal, just "Ctrl + Left Click" and it will redirect you to GitHub. Press on the "Create Pull Request" (YES, blue button! Again).</h5>
+
         </div>
 
         <div class="content">
@@ -164,28 +197,135 @@
 
         <div class="content">
           <h3>Create a new branch</h3>
+
+          <h5>Don't touch the main branch if you want to keep your job.</h5>
+          <br/>
+
+          <h5>1. Open Command Prompt or Powershell or Git Bash and go to your repository folder path.</h5>
+          <p>cd "your folder"</p>
+          <br/>
+
+          <h5>2. Create a new branch along with the name.</h5>
+          <p>git checkout -b "new branch name"</p>
+          <sup>NOTE: Remember to avoid creating branches with same name. There are ... consequences ... world-ending consequences.</sup>
         </div>
 
         <div class="content">
           <h3>Changing to another branch</h3>
+
+          <h5>Go back to where your codes belong.</h5>
+          <br/>
+
+          <h5>1. Open Command Prompt or Powershell or Git Bash and go to your repository folder path.</h5>
+          <p>cd "your folder"</p>
+          <br/>
+
+          <h5>2. Check your existing branches in local device.</h5>
+          <p>git branch</p>
+          <sup>NOTE: The branches available in your local devices may differ to branches in GitHub</sup>
+          <br/>
+
+          <h5>3. Go the existing branch.</h5>
+          <p>git checkout "branch name"</p>
+          <sup>NOTE: -b is not needed because you are not creating a new branch.</sup>
         </div>
 
         <div class="content">
           <h3>Checking branches</h3>
+
+          <h5>See what branches you have in your local device.</h5>
+          <br/>
+
+          <h5>1. Open Command Prompt or Powershell or Git Bash and go to your repository folder path.</h5>
+          <p>cd "your folder"</p>
+          <br/>
+
+          <h5>2. Check your existing branches in local device.</h5>
+          <p>git branch</p>
+          <sup>NOTE: The branches available in your local devices may differ to branches in GitHub</sup>
         </div>
 
         <div class="content">
           <h3>Deleting branches</h3>
+
+          <h5>Clearing old branches so you won't run out of branch naming ideas.</h5>
+          <br/>
+
+          <h5>1. Open Command Prompt or Powershell or Git Bash and go to your repository folder path.</h5>
+          <p>cd "your folder"</p>
+          <br/>
+
+          <h5>2. Checkout to the main branch.</h5>
+          <p>git checkout main/master</p>
+          <sup>NOTE: Always delete branches from your main branch.</sup>
+          <br/>
+
+          <h5>3. Check your existing branches in local device.</h5>
+          <p>git branch</p>
+          <sup>NOTE: The branches available in your local devices may differ to branches in GitHub</sup>
+          <br/>
+
+          <h5>4. Delete the branches in your local device. It won't affect the branches in GitHub.</h5>
+          <p>git branch -D "branch name"</p>
+        </div>
+
+        <div class="content">
+          <h3>Updating existing branches</h3>
+
+          <h5>Using back the same branch again and again is all right, but ...</h5>
+          <br/>
+
+          <h5>1. Open Command Prompt or Powershell or Git Bash and go to your repository folder path.</h5>
+          <p>cd "your folder"</p>
+          <br/>
+
+          <h5>2. Update your whole folder by pulling the main branch from GitHub to your local device.</h5>
+          <p>git pull origin main</p>
+          <br/>
+
+          <h5>3. Checkout to your existing branch, if you forgot, then check the branches you have.</h5>
+          <p>git branch</p>
+          <p>git checkout "the branch"</p>
+          <br/>
+
+          <h5>4. Update the branch you are in by pulling the main branch again.</h5>
+          <p>git pull origin main</p>
+          <sup>NOTE: This time it won't show any stuffs like created, added, modified, deleted, instead it will just show you something something FETCH_HEAD blah blah blah...</sup>
         </div>
 
         <div class="content">
           <h3>Merging branches to main branch</h3>
+
+          <h5>Time to get your hands dirty with conflicts arising. ONLY FOR WHOEVER IN CHARGE.</h5>
+          <br/>
+
+          <h5>1. Go to your GitHub and click into your repository.</h5>
+          <br/>
+
+          <h5>2. Press "Pull Requests" and you will see all pull requests.</h5>
+          <sup>If there is no pull requests, you can create it manually.</sup>
+          <br/>
+
+          <h5>(Optional) 3. To create a new pull request, press "New Pull Request" (Blue button). Base branch will be your main branch and compare branch will be the branch you want to merge into your main branch.</h5>
+          <br/>
+
+          <h5>4. If there is any conflicts, click "Resolve conflicts". It will show your code and the codes overlapping it, you will need some time to check and clear it.</h5>
+          <sup>NOTE: Don't make your seniors' life harder when you are working.</sup>
+          <br/>
+
+          <h5>5. If there is no conflicts or resolved, click "Merge Request" and your main branch will be updated with new codes.</h5>
+          <br/>
+
+          <h5>(Optional) 6. You can delete the branch if you wish to. A button to delete the branch will appear after you merged sucessfully.</h5>
         </div>
 
         <hr class="hr-text" data-content="Optional Section"/>
 
         <div class="content">
           <h3>Creating SSH key</h3>
+
+          <h5>Extra protection, less frustration. What the heck were you thinking?</h5>
+          <br/>
         </div>
       </div>
     </div>
