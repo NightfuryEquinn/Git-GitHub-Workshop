@@ -326,8 +326,73 @@
 
           <h5>Extra protection, less frustration. What the heck were you thinking?</h5>
           <br/>
+
+          <h5>1. Before proceeding, you can check your existing SSH keys if they exist.</h5>
+          <p>ls -al ~/.ssh</p>
+          <sup>NOTE: There are mostly .pub file.</sup>
+          <br/>
+
+          <h5>2. Open Git Bash, not other terminal.</h5>
+          <br/>
+
+          <h5>3. Generate a SSH key by replacing it with your GitHub email.</h5>
+          <p>ssh-keygen -t ed25519 -C "your GitHub email"</p>
+          <h5>If the above ed25519 algorithm can't be used, use the rsa algorithm.</h5>
+          <p>ssh-keygen -t rsa -b 4096 -C "your GitHub email"</p>
+          <br/>
+
+          <h5>4. It will prompt you:</h5>
+          <p>Enter a file in which to save the key: </p>
+          <h5>Retype the file path provided and replace the SSH keyname with whichever you like.</h5>
+          <p>id_"random keyname"</p>
+          <br/>
+
+          <h5>5. Set your password once and confirm it again.</h5>
+          <sup>NOTE: You can't see the password but it is written adn recorded.</sup>
+          <br/>
+
+          <h5>6. Start ssh-agent manually.</h5>
+          <p>eval "$(ssh-agent -s)"</p>
+          <h5>It will return your agent pid. It may differ from devices.</h5>
+          <p>Agent pid 59566</p>
+          <br/>
+
+          <h5>7. Add your SSH private key to the agent and replace the id with what you inputted in Step 4.</h5>
+          <p>ssh-add ~/.ssh/id_"random keyname"</p>
+          <br/>
+
+          <h5>8. Copy the SSH public key to your clipboard.</h5>
+          <p>clip < ./.ssh/id"random keyname".pub</p>
+          <br/>
+
+          <h5>9. Open your GitHub and go to "Profile" -> "Setting".</h5>
+          <br/>
+
+          <h5>10. Click "SSH and GPG keys" -> "New SSH key" / "Add SSH key".</h5>
+          <br/>
+
+          <h5>11. Set any title, leave the key type as "Authentication Key", paste in the SSH public key.</h5>
+          <sup>NOTE: Remove any whitespaces or empty rows.</sup>
+          <sup>NOTE: Your public SSH key should begin with the algorithmn name and ends with your email address.</sup>
+          <br/>
+
+          <h5>12. Press "Add SSH key" and your first SSH key is created.</h5>
+          <br/>
+
+          <h5>(Optional) 13. Test your SSH key connection.</h5>
+          <p>ssh -T git@github.com</p>
         </div>
       </div>
+
+      <footer>
+        <h4>Written by Yip Zi Xian</h4>
+        <a href="https://discord.gg/2TUHh6XNYE" target="_blank">
+          <h4 class="footer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16"> <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/></svg>
+            Join my Z-E-N server 
+          </h4>
+        </a>
+      </footer>
     </div>
   </body>
 </html>
